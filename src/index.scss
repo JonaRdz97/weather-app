@@ -1,0 +1,495 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif; 
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  color: white;
+}
+
+#root{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.app{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+a{
+    display: inline-block;
+    margin: auto 3px;
+    color: #A09FB1;
+    font-weight: 700;
+}
+
+/*Contenedor con para la consulta del clima (hoy)*/
+.now{
+    height: 100%;
+    background: #1E213A;
+}
+
+/* Contendedor de el boton Search y el icono localización */
+.header{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Contendor con info del clima actual */
+.content-now{
+    /* border: 1px solid red; */
+    margin: auto;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: column;
+}
+
+.content-weather-now{
+    width: 100%;
+    /* border: 1px solid green; */
+    background-image: url("./assets/bg_clouds.svg");
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagen del clima actual */
+.weather-type{
+    width: 50%;
+}
+
+.container-temperature-value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Texto con la temperatura del día actual */
+.temperature-now{
+    font-weight: 500;
+    margin: 0 5px 0 auto;
+    font-size: 6rem;
+    letter-spacing: 1px;
+}
+
+.temperature-kind{
+    font-size: 2.5rem;
+    color: #A09FB1;
+}
+
+/* Texto con el estado del clima */
+.temperature-time{
+    font-size: 2.25rem;
+    color: #A09FB1;
+    font-weight: 500;
+}
+
+/* Texto con la fecha de la consulta (hoy) */
+.weather-date-now{
+    text-align: center;
+    font-size: 1.125rem;
+    color: #88869D;
+    font-weight: 500;
+}
+
+/* Contenedor de icono location y ciudad de consulta */
+.content-city{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A09FB1;
+}
+
+/* texto con la ciudad de consulta */
+.city{
+    margin-left: 15px;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* Icono de mapa y viento */
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
+/* Contendedor para la consulta del clima de los demás días */
+.others{
+    height: 100vh;
+    background: #100E1D;
+}
+
+
+/* Contenedor para el icono de darkmode */
+.dkmode-btn{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 40px;
+}
+
+.container-next-days-weather{
+    display: grid;
+    padding: 0 40px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.days-weather{
+    min-height: 200px;
+    height: auto;
+    max-height: 350px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: #1E213A;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.days-weather > p{
+    text-align: center;
+}
+
+.days-weather > img{
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 45%;
+}
+
+.min-max{
+    font-size: 1.1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.max{
+    font-weight: 500;
+}
+
+.min{
+    color: #A09FB1;
+}
+
+
+/* Iconos para el darkmode y la localización */
+.location, .darkmode{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background: #6E707A;
+}
+
+.darkmode{
+    background: #1E213A;
+}
+
+.close{
+    display: block;
+    margin: auto 2rem auto auto;
+    height: 30px;
+    width: 30px;
+}
+
+.input-search, .btn-search-loc{
+    font-family: 'Raleway', sans-serif;
+    height: 2.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+#search-location{
+    width: 100%;
+}
+
+.input-search{
+    width: 50%;
+    margin-left: 3rem;
+    box-sizing: border-box;
+    padding-left: .5rem;
+    border: 1px solid #E7E7EB;
+    background: #1E213A;
+    color: #616475;
+}
+
+.btn-search-loc{
+    margin-left: 1rem;
+    width: 5rem;
+    background: #3C47E9;
+    color: #E7E7EB;
+}
+
+.location:hover, .darkmode:hover, .close:hover, #search:hover,.btn-search-loc:hover{
+    cursor: pointer;
+}
+
+
+
+/* Boton de Search */
+.btn-search{
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    background: #6E707A;
+    color: white;
+    width: 40%;
+    height: 50px;
+}
+
+
+
+
+
+
+
+/* Contenedor para el icono de darkmode */
+.dkmode-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 3rem;
+}
+
+
+
+.title-today{
+    font-weight: 700;
+    font-size: 1.5rem;
+    grid-column: 1/-1;
+}
+
+.stats{
+    /* border: 1px solid blue; */
+    margin: 30px 3rem auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.status{
+    padding: 10px;
+    height: auto;
+    margin: 8px;
+    background: #1E213A;
+    border-radius: 3px;
+}
+
+.title-status{
+    font-weight: 500;
+    font-size: 1rem;
+    color: #E7E7EB;
+}
+
+.container-value{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.value{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.unit{
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.status > p{
+    text-align: center;
+}
+
+.humidity-percent{
+    width: 70%;
+    margin: 0 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.humidity-percent > p{
+    margin: 0 auto;
+    font-size: .7rem;
+}
+
+
+.progress{
+    width: 50%;
+    height: .8rem;
+    margin: auto 25%;
+    background: #E7E7EB;
+    border-radius: .5rem;
+    padding: 2px 5px;
+}
+
+.humidity{
+    height: .4rem;
+    background: #FFEC65;
+    border-radius: 4px;
+}
+
+/* Contenedor con el icono de wind y el texto */
+.wind-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wind-icon > .icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #A09FB1;
+    margin: auto 5px;
+    padding: 5px;
+}
+
+footer{
+    color: #A09FB1;
+    margin-top: 1.5rem;
+    font-size: .8rem;
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.visible{
+    visibility: hidden;
+}
+
+.hidden{
+    display: none;
+}
+
+/**
+    Cambio de color (darkmode)
+*/
+
+.change-color1{
+    background: #FBFAFA;
+    color: #100E1D;
+}
+
+.change-color2{
+    background: #F1F4F4;
+    color: #100E1D;
+}
+
+.dkm-weather-days{
+    background: #FCFEFE;
+}
+
+.dkm-stats{
+    background: #FCFEFE;
+    color: #100E1D;
+}
+
+.dkm-p{
+    color: #100E1D;
+}
+
+.dkm-btn-bg{
+    background: #6E707A;
+}
+
+.dkm-input{
+    color: #1E213A;
+    background: #F1F4F4;
+}
+
+/* MEDIA QUERIES*/
+
+/* Extra small devices (phones, 600px and down) */ 
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 12px;
+    }
+
+    .now, .others,.status{
+        grid-column: 1/-1;
+    }
+
+    .container-weather5{
+        grid-template-columns: repeat(2,50%);
+    }
+
+    .location, .darkmode{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .btn-search{
+        height: 40px;
+    }
+
+    .progress{
+        margin: auto 25% 20px;
+    }
+
+}
+
+/*  Small devices (portrait tablets and large phones, 601px and up) */ 
+@media only screen and (min-width: 601px) {
+    html{
+        font-size: 14px;
+    }
+
+    .now, .others,.status{
+        grid-column: 1/-1;
+    }
+
+    .btn-search{
+        width: 25%;
+    }
+
+    .progress,.wind-icon{
+        margin-bottom: 10px;
+    }
+
+}
+
+/*  Medium devices (landscape tablets, 768px and up)  */
+@media only screen and (min-width: 768px) {
+    .status{
+        grid-column: span 1;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    html{
+        font-size: 16px;
+    }
+    
+    .now,.others{
+        grid-column: span 1;
+    }
+
+    .btn-search{
+        width: 40%;
+    }
+}
