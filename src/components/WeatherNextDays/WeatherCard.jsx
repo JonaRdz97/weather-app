@@ -5,7 +5,7 @@ import WeatherImage from "../common/WeatherImage";
 
 function WeatherCard({min, max, date, imgWeather}){
     return(
-        <div className="days-weather">
+        <div className={`days-weather ${localStorage.getItem("mode") === "light" ? "dkm-weather-days" : ""}`}>
             <TextDate
                 cssClass="day"
                 date={date}

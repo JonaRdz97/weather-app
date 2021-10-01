@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 function MyIconButton({icon, cssClass, handleClick, ariaLabel}){
     const classes = useStyles();
     return(
-        <IconButton className={classes.btn} /* className={cssClass} onClick={handleClick} aria-label={ariaLabel} */>
+        <IconButton className={classes.btn} onClick={handleClick}/* className={cssClass} onClick={handleClick} aria-label={ariaLabel} */>
             {icon}
         </IconButton>
     );

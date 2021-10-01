@@ -1,8 +1,8 @@
 import TextInfo from "../common/TextInfo";
 
-function StatisticsCard({cssClass="", title="", value="", unit="", visualComponent=null}){
+function StatisticsCard({cssClass="", title="", value="", unit="", children}){
     return(
-        <div className={`status ${cssClass}`}>
+        <div className={`status ${cssClass} ${localStorage.getItem("mode") === "light" ? "dkm-stats" : ""}`}>
             <TextInfo
                 cssClass="title-status"
                 text={title}
@@ -17,7 +17,7 @@ function StatisticsCard({cssClass="", title="", value="", unit="", visualCompone
                     text={unit}
                 />
             </div>
-            {visualComponent}
+            {children}
         </div>
     );
 }

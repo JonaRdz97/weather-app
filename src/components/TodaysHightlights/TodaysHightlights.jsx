@@ -22,14 +22,16 @@ function TodaysHightlights(){
                 title="Wind status"
                 value={wind_spd.toFixed(1)}
                 unit="m/s"
-                visualComponent={<WindDirection direction={wind_cdir}/>}
-            />
+            >
+                <WindDirection direction={wind_cdir}/>
+            </StatisticsCard>
             <StatisticsCard
                 title="Humidity"
                 value={rh}
                 unit="%"
-                visualComponent={<HumidityBar/>}
-            />
+            >
+                <HumidityBar/>
+            </StatisticsCard>
             <StatisticsCard
                 title="Visibility"
                 value={vis.toFixed(2)}
