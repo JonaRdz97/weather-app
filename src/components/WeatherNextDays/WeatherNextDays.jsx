@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import TodaysHightlights from "../TodaysHightlights/TodaysHightlights";
-import MyIconButton from "../common/MyIconButton";
-import WeatherCard from "./WeatherCard";
-import Attribution from "../common/Atributtion";
 import Brightness2RoundedIcon from '@material-ui/icons/Brightness2Rounded';
 import WbSunnyRoundedIcon from "@material-ui/icons/WbSunnyRounded";
-import getImageWeather from "../../getWeatherImage";
-import { setMode } from "../../redux/reducers/appModeReducer";
+import TodaysHightlights from "components/TodaysHightlights/TodaysHightlights";
+import MyIconButton from "components/common/MyIconButton";
+import Attribution from "components/common/Attributtion";
+import WeatherCard from "./WeatherCard";
+import getImageWeather from "getWeatherImage";
+import { setMode } from "redux/reducers/appModeReducer";
 
 function WeatherNextDays() {
 

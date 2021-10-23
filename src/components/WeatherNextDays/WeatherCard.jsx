@@ -1,7 +1,7 @@
-//import Card from '@material-ui/core/Card';
-import TextDate from "../common/TextDate";
-import TextInfo from '../common/TextInfo';
-import WeatherImage from "../common/WeatherImage";
+import Card from '@material-ui/core/Card';
+import TextDate from "components/common/TextDate";
+import TextInfo from 'components/common/TextInfo';
+import WeatherImage from "components/common/WeatherImage";
 
 function WeatherCard({min, max, date, imgWeather}){
     return(

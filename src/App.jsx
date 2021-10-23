@@ -1,16 +1,18 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setCurrentWeather, setCityName, setNextDaysWeather } from "./redux/reducers/weatherReducer";
-import ContainerTodayWeather from "./components/TodayWeather/ContainerTodayWeather";
-import WeatherNextDays from "./components/WeatherNextDays/WeatherNextDays";
+import { setCurrentWeather, setCityName, setNextDaysWeather } from "redux/reducers/weatherReducer";
+import ContainerTodayWeather from "components/TodayWeather/ContainerTodayWeather";
+import WeatherNextDays from "components/WeatherNextDays/WeatherNextDays";
 import getWeather from "./Provider";
 import { useSelector } from "react-redux";
-import { setMode } from "./redux/reducers/appModeReducer";
+import { setMode } from "redux/reducers/appModeReducer";
 //import ErrorMessage from "./components/ErrorMessage";
+import { app } from "assets/styles/App.module.scss"
 
 function App() {
   const dispatch = useDispatch();
   const mode = localStorage.getItem("mode");
+  
   useEffect(() => {
     const getData = async () => {
       const response = await getWeather();
@@ -30,7 +32,7 @@ function App() {
   }, [dispatch, mode]);
 
   return (
-    <div className="app">
+    <div className={app}>
       <ContainerTodayWeather />
       <WeatherNextDays />
     </div>

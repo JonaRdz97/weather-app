@@ -1,32 +1,31 @@
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles({
-    btn:{
-        background: "#6E707A",
-        color: "#F2F2F2",
-        textTransform: "none",
-        borderRadius: 0,
-        width: "40%",
-        "&:hover":{
-            background: "#7A7C87"
-        }
+  btn: {
+    background: "#6E707A",
+    color: "#F2F2F2",
+    textTransform: "none",
+    borderRadius: 0,
+    width: "40%",
+    "&:hover": {
+      background: "#7A7C87",
     },
-    txt:{
-        letterSpacing: 1,
-        fontWeight: 500
-    }
+  },
+  txt: {
+    letterSpacing: 1,
+    fontWeight: 500,
+  },
 });
 
-function TextButton({text}){
+function TextButton({ text, handleClick }) {
+  const classes = useStyles();
 
-    const classes = useStyles();
-
-    return(
-        <Button className={`${classes.btn} ${classes.txt}`}>
-            {text}
-        </Button>
-    );
+  return (
+    <Button className={`${classes.btn} ${classes.txt}`} onClick={handleClick}>
+      {text}
+    </Button>
+  );
 }
 
 export default TextButton;

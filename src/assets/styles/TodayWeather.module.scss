@@ -1,0 +1,10 @@
+.weatherNowContainer{
+    height: 100%;
+    background: #1E213A;
+    overflow-x: hidden;
+    
+    //Extra small devices (phones, 600px and down) 
+    @media only screen and (max-width: 600px) {
+      grid-column: 1/-1;
+    }
+}

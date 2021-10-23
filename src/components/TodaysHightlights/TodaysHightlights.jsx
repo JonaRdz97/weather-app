@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import TextInfo from "../common/TextInfo";
+import TextInfo from "components/common/TextInfo";
 import WindDirection from "./WindDirection";
 import HumidityBar from "./HumidityBar";
 import StatisticsCard from "./StatisticsCard";

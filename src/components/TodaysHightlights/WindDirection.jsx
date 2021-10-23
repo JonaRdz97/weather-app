@@ -1,5 +1,5 @@
-import TextInfo from "../common/TextInfo";
 import NavigationIcon from '@material-ui/icons/Navigation';
+import TextInfo from "components/common/TextInfo";
 
 function WindDirection({direction}){
     return(

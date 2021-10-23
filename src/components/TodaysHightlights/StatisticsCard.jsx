@@ -1,4 +1,4 @@
-import TextInfo from "../common/TextInfo";
+import TextInfo from "components/common/TextInfo";
 
 function StatisticsCard({cssClass="", title="", value="", unit="", children}){
     return(

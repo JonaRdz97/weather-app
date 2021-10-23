@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
-import TextInfo from '../common/TextInfo';
-import TextDate from '../common/TextDate';
-import WeatherImage from '../common/WeatherImage';
 import LocationOnRoundedIcon from '@material-ui/icons/LocationOnRounded';
 import Skeleton from '@material-ui/lab/Skeleton';
-import getImageWeather from '../../getWeatherImage';
+import TextInfo from 'components/common/TextInfo';
+import TextDate from 'components/common/TextDate';
+import WeatherImage from 'components/common/WeatherImage';
+import getImageWeather from 'getWeatherImage';
 
 function InfoTodayWeather(){
 
