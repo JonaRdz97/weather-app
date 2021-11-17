@@ -1,16 +1,18 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Brightness2RoundedIcon from '@material-ui/icons/Brightness2Rounded';
-import WbSunnyRoundedIcon from "@material-ui/icons/WbSunnyRounded";
 import TodaysHightlights from "components/TodaysHightlights/TodaysHightlights";
-import MyIconButton from "components/common/MyIconButton";
+import IconButton from "components/common/IconButton";
 import Attribution from "components/common/Attributtion";
 import WeatherCard from "./WeatherCard";
 import getImageWeather from "getWeatherImage";
 import { setMode } from "redux/reducers/appModeReducer";
+import {
+  others,
+  dkm_btn_container,
+  next_days_weather_container,
+} from "assets/styles/WeatherNextDays.module.scss";
 
 function WeatherNextDays() {
-
   const currentMode = useSelector((state) => state.myModeReducer.currentMode);
   const dispatch = useDispatch();
   const nextDaysInfo = useSelector(
@@ -21,26 +23,32 @@ function WeatherNextDays() {
       console.log("Use effect other container")
     }, [currentMode]);
  */
-  console.log(currentMode)
+  console.log(currentMode);
   const handleModeClick = () => {
-    console.log("Boton presionado")
+    console.log("Boton presionado");
     if (currentMode === "light") {
       localStorage.mode = "dark";
-      dispatch(setMode("dark"))
-      console.log("SE pone en dark")
-    } else  if(currentMode === "dark"){
+      dispatch(setMode("dark"));
+    } else if (currentMode === "dark") {
       localStorage.mode = "light";
-      dispatch(setMode("light"))
-      console.log("SE pone en light")
+      dispatch(setMode("light"));
     }
-  }
+  };
 
   return (
-    <div className={`others ${ currentMode === "light" ? "change-color1" : ""}`}>
-      <div className="dkmode-btn">
-        <MyIconButton icon={currentMode === "light" ? <Brightness2RoundedIcon /> : <WbSunnyRoundedIcon />} handleClick={handleModeClick}/>
+    <div
+      className={`${others} ${currentMode === "light" ? "change-color1" : ""}`}
+    >
+      <div className={dkm_btn_container}>
+        <IconButton handleClick={handleModeClick}>
+          {currentMode === "dark" ? (
+            <img className="icon" src="img/sun.svg" alt="sun icon" />
+          ) : (
+            <img className="icon" src="img/moon.svg" alt="moon icon" />
+          )}
+        </IconButton>
       </div>
-      <div className="container-next-days-weather">
+      <div className={next_days_weather_container}>
         {nextDaysInfo.map((day) => {
           return (
             <WeatherCard

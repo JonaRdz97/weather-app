@@ -1,5 +1,22 @@
-$color: red;
+footer{
+  /* font-size: .8rem; */
+  grid-column: 1/-1;
+  text-align: center;
+}
 
-.attribution{
-  color: $color;
+.attribution {
+  font-size: 0.675rem;
+  line-height: 17px;
+  color: #A09FB1;
+  font-weight: 500;
+}
+
+.attribution_name {
+  color: #A09FB1;
+  font-weight: 700;
+}
+
+.attribution_dev {
+  color: #A09FB1;
+  font-weight: 700;
 }

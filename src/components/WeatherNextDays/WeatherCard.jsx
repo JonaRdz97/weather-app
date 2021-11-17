@@ -1,27 +1,28 @@
-import Card from '@material-ui/core/Card';
 import TextDate from "components/common/TextDate";
 import TextInfo from 'components/common/TextInfo';
 import WeatherImage from "components/common/WeatherImage";
+import { nextDaysWeatherImage } from "assets/styles/WeatherImage.module.scss";
+import { daysWeather, textDate, minMaxContainer, minStyles, maxStyles } from "assets/styles/WeatherCard.module.scss";
 
 function WeatherCard({min, max, date, imgWeather}){
     return(
-        <div className={`days-weather ${localStorage.getItem("mode") === "light" ? "dkm-weather-days" : ""}`}>
+        <div className={`${daysWeather} ${localStorage.getItem("mode") === "light" ? "dkm-weather-days" : ""}`}>
             <TextDate
-                cssClass="day"
+                cssClass={textDate}
                 date={date}
             />
             <WeatherImage
-                cssClass="weather-image"
+                cssClass={nextDaysWeatherImage}
                 srcImage={imgWeather}
                 altImage="weather icon"
             />
-            <div className="min-max">
+            <div className={minMaxContainer}>
                 <TextInfo
-                    cssClass="max"
+                    cssClass={maxStyles}
                     text={`${max}ºC`}
                 />
                 <TextInfo
-                    cssClass="min"
+                    cssClass={minStyles}
                     text={`${min}ºC`}
                 />
             </div>

@@ -1,30 +1,11 @@
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import {btn} from "assets/styles/TodayWeather.module.scss";
 
-const useStyles = makeStyles({
-  btn: {
-    background: "#6E707A",
-    color: "#F2F2F2",
-    textTransform: "none",
-    borderRadius: 0,
-    width: "40%",
-    "&:hover": {
-      background: "#7A7C87",
-    },
-  },
-  txt: {
-    letterSpacing: 1,
-    fontWeight: 500,
-  },
-});
-
-function TextButton({ text, handleClick }) {
-  const classes = useStyles();
+function TextButton({ text, cssClass, handleClick}) {
 
   return (
-    <Button className={`${classes.btn} ${classes.txt}`} onClick={handleClick}>
+    <button type="button" onClick={handleClick} className={`${btn} ${cssClass}`}>
       {text}
-    </Button>
+    </button>
   );
 }
 

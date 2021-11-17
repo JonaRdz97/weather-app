@@ -1,10 +1,130 @@
-.weatherNowContainer{
-    height: 100%;
-    background: #1E213A;
-    overflow-x: hidden;
-    
-    //Extra small devices (phones, 600px and down) 
-    @media only screen and (max-width: 600px) {
-      grid-column: 1/-1;
-    }
+$background-icons: #6e707a;
+$contrast-text-color: #e7e7eb;
+
+.weatherNowContainer {
+  display: flex;
+  padding: 42px 0px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #1e213a;
+  overflow-x: hidden;
+  //Extra small devices (phones, 600px and down)
+  @media only screen and (max-width: 600px) {
+    grid-column: 1/-1;
+  }
+}
+
+.headerTodayWeather {
+  width: 100%;
+  padding: 0 46px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.image_weather_container {
+  width: 100%;
+  /* border: 2px solid orange; */
+  background-image: url("../bg_clouds.svg");
+  background-origin: content-box;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temperature_value_container {
+  /* border: 2px solid wheat; */
+}
+
+// Texto con la temperatura del día actual
+.temperature_now {
+  display: inline-block;
+  /* border: 1px solid purple; */
+  font-weight: 500;
+  font-size: 9rem;
+  color: #e7e7eb;
+  letter-spacing: 1px;
+}
+
+.temperature_unit {
+  display: inline-block;
+  /* border: 1px solid aqua; */
+  font-size: 3rem;
+  color: #a09fb1;
+}
+
+.temperature_time {
+  font-size: 2.25rem;
+  line-height: 42.26px;
+  color: #a09fb1;
+  font-weight: 600;
+}
+
+.temperature_today_date {
+  color: #88869d;
+  font-size: 1.125rem;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.content_city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.city {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #a09fb1;
+}
+
+.btn {
+  border: none;
+  border-radius: 3px;
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+}
+
+.btnSearch {
+  width: 161px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 18.78px;
+  background: $background-icons;
+  color: $contrast-text-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+//TEST
+
+.search_location{
+  padding: 0px 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.close_styles{
+  align-self: flex-end;
+  // display: block;
+  // margin: auto 2rem auto auto;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  &:hover{
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
 }

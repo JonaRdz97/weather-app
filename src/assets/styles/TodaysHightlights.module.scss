@@ -1,0 +1,70 @@
+.today_statistics{
+  width: 100%;
+  /* border: 1px solid green; */
+}
+
+.today_hightlights_title{
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.statistics_container{
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 50px;
+}
+
+.statistic_card{
+  min-width: 164px;
+  min-height: 102px;
+  max-width: 428px;
+  max-height: 220px;
+  width: 100%;
+  height: auto;
+  background: #1E213A;
+  padding: 22px 50px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+// averiguar cómo funciona anidar elementos en módulos css
+.title_status{
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 18.87px;
+  text-align: center;
+}
+
+.value_styles{
+  display: inline-block;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.unit_styles{
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.wind_icon{
+  margin-top: 15px;
+  /* border: 1px solid yellow; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.wind_dir{
+  background: rgba(255, 255, 255, 0.2);
+  width: 35px;
+  height: 35px;
+  padding: 8px;
+  border-radius: 50%;
+}

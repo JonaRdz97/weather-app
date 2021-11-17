@@ -1,13 +1,15 @@
+import { humidity_bar_container, humidity_percentage, humidity_bar, humidity } from "assets/styles/HumidityBar.module.scss";
+
 function HumidityBar(){
     return(
-        <div className="humidity-bar-container">
-            <div className="humidity-percent">
+        <div className={humidity_bar_container}>
+            <div className={humidity_percentage}>
                 <p>0</p>
                 <p>50</p>
                 <p>100</p>
             </div> 
-            <div className="progress">
-                <div className="humidity"></div>
+            <div className={humidity_bar}>
+                <div className={humidity}></div>
             </div>        
         </div>
     );

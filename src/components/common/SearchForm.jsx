@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import toast, { Toaster } from 'react-hot-toast';
 import { closeSearchLocation } from "redux/reducers/appModeReducer";
+import { input_search, btn_search_location, form_styles } from "assets/styles/SearchForm.module.scss";
 
 export default function SearchForm({onSubmit}) {
   // const dispatch = useDispatch()
@@ -31,16 +32,16 @@ export default function SearchForm({onSubmit}) {
   };
 
   return (
-    <form style={{ border: "1px solid red" }}>
+    <form className={form_styles}>
       <input
         type="text"
         placeholder="e.g. Madrid, Spain"
-        className="input-search"
+        className={input_search}
         id="input-city"
         onChange={handleChange}
         value={location}
       />
-      <button type="submit" className="btn-search-loc" onClick={handleSubmit}>
+      <button type="submit" className={btn_search_location} onClick={handleSubmit}>
         Search
       </button>
       <Toaster

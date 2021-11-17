@@ -1,0 +1,35 @@
+.daysWeather{
+  min-height: 177px;
+  height: auto;
+  max-height: 250px;
+  max-width: 120;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background:#1E213A;
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+.textDate{
+  text-align: center;
+}
+
+.minMaxContainer{
+  font-size: 1.1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.maxStyles{
+  color: #E7E7EB; // test
+  font-weight: 500;
+}
+
+.minStyles{
+  color: #A09FB1;
+}
+

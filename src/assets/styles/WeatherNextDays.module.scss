@@ -1,0 +1,23 @@
+.others{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: #100E1D;
+  padding: 42px 123px 5px 123px;
+}
+
+.next_days_weather_container{
+  width: 100%;
+  /* border: 1px solid plum; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.dkm_btn_container{
+  width: 100%;
+  /* border: 1px solid aqua; */
+  display: flex;
+  justify-content: flex-end;
+}
