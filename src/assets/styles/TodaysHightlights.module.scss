@@ -1,58 +1,90 @@
-.today_statistics{
+.today_statistics {
   width: 100%;
   /* border: 1px solid green; */
 }
 
-.today_hightlights_title{
+.today_hightlights_title {
   font-weight: 700;
   font-size: 1.5rem;
   margin-top: 40px;
   margin-bottom: 10px;
 }
 
-.statistics_container{
+.statistics_container {
   /* border: 1px solid red; */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px 50px;
+  gap: 15px 40px;
+   //Extra small devices (phones, 600px and down)
+   @media only screen and (max-width: 600px) {
+    place-items: center;
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 601px) {
+    place-items: center;
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    // place-items: center;
+  }
 }
 
-.statistic_card{
+.statistic_card {
   min-width: 164px;
   min-height: 102px;
   max-width: 428px;
   max-height: 220px;
   width: 100%;
   height: auto;
-  background: #1E213A;
+  background: #1e213a;
   padding: 22px 50px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  @media only screen and (max-width: 600px) {
+    grid-column: 1/-1;
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 601px) {
+    grid-column: 1/-1;
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    grid-column: span 1;
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
 }
 
 // averiguar cómo funciona anidar elementos en módulos css
-.title_status{
+.title_status {
   font-weight: 500;
   font-size: 1rem;
   line-height: 18.87px;
   text-align: center;
 }
 
-.value_styles{
+.value_styles {
   display: inline-block;
   font-size: 4.5rem;
   font-weight: 700;
 }
 
-.unit_styles{
+.unit_styles {
   display: inline-block;
   font-weight: 500;
   font-size: 1.8rem;
 }
 
-.wind_icon{
+.wind_icon {
   margin-top: 15px;
   /* border: 1px solid yellow; */
   display: inline-flex;
@@ -61,10 +93,13 @@
   gap: 5px;
 }
 
-.wind_dir{
+.wind_dir {
   background: rgba(255, 255, 255, 0.2);
   width: 35px;
   height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px;
   border-radius: 50%;
 }

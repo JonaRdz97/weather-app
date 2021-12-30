@@ -2,6 +2,7 @@ import { useSelector, useDispatch} from "react-redux";
 import { closeSearchLocation } from "redux/reducers/appModeReducer";
 import SearchForm from "components/common/SearchForm";
 import { close_styles, search_location } from "assets/styles/TodayWeather.module.scss";
+import closeIcon from "assets/img/close.svg";
 
 function getWeather({location}){
   console.log("Haciendo Peticion con ", location)
@@ -20,7 +21,7 @@ export default function LocationSearch(){
   return(
     <div className={`${isSearchLocation ? "openContainer" : "closeContainer"} ${search_location}`}>
       { /* Cambiar por boton */}
-      <img src="./img/close.svg" alt="close-icon" className={close_styles} id="exit" onClick={() => dispatch(closeSearchLocation()) }/>
+      <img src={closeIcon} alt="close-icon" className={close_styles} id="exit" onClick={() => dispatch(closeSearchLocation()) }/>
       <SearchForm onSubmit={handleSubmit}/>
     </div>
   );

@@ -11,7 +11,7 @@ import {
 } from "assets/styles/TodaysHightlights.module.scss";
 
 function TodaysHightlights() {
-  const { wind_cdir, wind_spd, rh, vis, pres } = useSelector(
+  const { wind_cdir, wind_spd, rh, vis, pres, wind_dir } = useSelector(
     (state) => state.myWeatherReducer.currentWeather
   );
 
@@ -29,7 +29,7 @@ function TodaysHightlights() {
           value={wind_spd.toFixed(1)}
           unit="m/s"
         >
-          <WindDirection direction={wind_cdir} />
+          <WindDirection direction={wind_cdir} degrees={wind_dir}/>
         </StatisticsCard>
         <StatisticsCard
           cssClass={statistic_card}
@@ -48,7 +48,7 @@ function TodaysHightlights() {
         <StatisticsCard
           cssClass={statistic_card}
           title="Air Pressure"
-          value={pres.toFixed(1)}
+          value={parseInt(pres)}
           unit="mb"
         />
       </div>
