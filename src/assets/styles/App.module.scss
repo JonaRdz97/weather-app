@@ -1,9 +1,9 @@
 .app {
-  background: brown;
+  //background: brown;
   width: 100%;
   display: grid;
   grid-template-columns: 0.6fr 1.4fr;
   @media only screen and (max-width: 600px) {
-    background: purple;  
+    //background: purple;  
   }
 }

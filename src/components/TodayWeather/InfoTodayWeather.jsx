@@ -10,22 +10,12 @@ import locationIcon from "assets/img/location.svg";
 function InfoTodayWeather() {
   const { weather, temp, valid_date } = useSelector((state) => state.myWeatherReducer.currentWeather);
   const { name, code } = useSelector((state) => state.myWeatherReducer.city);
-  const weatherImg = useWeatherImage(weather); //weather.code
-  
-  if (!weather) {
-    return <h1>Cargando</h1>;
-  }
-  
+  const weatherImg = useWeatherImage(weather.code);
   
   return (
-    /* Object.entries(weatherData).length === 0  && (Resolver lo del objeto undefined con renderizado condicional*/
     <>
       <div className={image_weather_container}>
-        <WeatherImage
-          cssClass={todayWeatherImage}
-          srcImage={weatherImg}
-          altImage="weather"
-        />
+        <WeatherImage cssClass={todayWeatherImage} srcImage={weatherImg} altImage="weather"/>
       </div>
       <div className={temperature_value_container}>
         <TextInfo cssClass={temperature_now} text={`${temp.toFixed()}`} />

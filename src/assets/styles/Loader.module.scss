@@ -1,0 +1,65 @@
+.loader_container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #100e1d;
+}
+
+.sun_loader{
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: calc(50% - 45px);
+  left: calc(50% - 45px);
+}
+
+#crown{
+  fill: #F2C230;
+  transform-origin: center;
+  animation: crownAnimation 5s cubic-bezier(0.67, -0.17, 0.49, 1.09) 0s infinite;
+}
+
+#face{
+  fill:#f2da91
+}
+
+.eyes{
+  transform-origin: center;
+  fill:none;
+  stroke:#3a3f45;
+  stroke-width:4;
+  stroke-linecap:round;
+  stroke-miterlimit:10;
+  animation: faceAnimation 1.2s ease-in-out 0s infinite alternate;
+}
+
+.cheeks{
+  transform-origin: center;
+  fill:#f299a9;
+  animation: faceAnimation 1.2s ease-in-out 0s infinite alternate;
+}
+
+#mouth{
+  transform-origin: center;
+  fill:none;
+  stroke:#3a3f45;
+  stroke-width:4;
+  stroke-linecap:round;
+  stroke-miterlimit:10;
+  animation: faceAnimation 1.2s ease-in-out 0s infinite alternate;
+}
+
+@keyframes crownAnimation {
+ 0%{
+   transform: rotate(0deg);
+ }
+ 100%{
+  transform: rotate(360deg);
+ } 
+}
+
+@keyframes faceAnimation {
+ 100%{
+   transform: translateY(-13px);
+ } 
+}

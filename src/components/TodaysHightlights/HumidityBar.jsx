@@ -1,6 +1,6 @@
 import { humidity_bar_container, humidity_percentage, humidity_bar, humidity } from "assets/styles/HumidityBar.module.scss";
 
-function HumidityBar(){
+function HumidityBar({humidityPercentage}){
     return(
         <div className={humidity_bar_container}>
             <div className={humidity_percentage}>
@@ -9,7 +9,7 @@ function HumidityBar(){
                 <p>100</p>
             </div> 
             <div className={humidity_bar}>
-                <div className={humidity}></div>
+                <div className={humidity} style={{width: `${humidityPercentage}%`}}></div>
             </div>        
         </div>
     );

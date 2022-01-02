@@ -16,10 +16,10 @@ function WeatherNextDays() {
     (state) => state.myWeatherReducer.nextDaysWeather
   );
 
-  /*   useEffect(() => {
+     useEffect(() => {
       console.log("Use effect other container")
     }, [currentMode]);
- */
+ 
   console.log(currentMode);
   const handleModeClick = () => {
     console.log("Boton presionado");
@@ -32,7 +32,7 @@ function WeatherNextDays() {
     }
   };
 
-  return (
+  return nextDaysInfo && (
     <div
       className={`${others} ${currentMode === "light" ? "change-color1" : ""}`}
     >

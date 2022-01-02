@@ -14,7 +14,7 @@ const weather = {
   nextDaysWeather: [], */
 };
 
-export default async function getWeather() {
+async function getWeather() {
   //console.log(data);
   weather.city = { name: data.city_name, code: data.country_code };
   weather.todayWeather = data.data[0];
