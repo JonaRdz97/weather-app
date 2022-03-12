@@ -9,7 +9,7 @@ function ContainerTodayWeather() {
   const isSearchLocation = useSelector((state) => state.myModeReducer.isSearchLocation);
   // TODO cambiar el nombre de la clase change-color por una más descriptiva
   return (
-    <div className={`${weatherNowContainer} ${currentMode === "light" ? "lg-mode" : "dkmode"}`}>
+    <div className={`${weatherNowContainer} dkmode`}>
       {isSearchLocation ? (
         <LocationSearch />
       ) : (

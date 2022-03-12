@@ -5,31 +5,38 @@ import ContainerTodayWeather from "components/TodayWeather/ContainerTodayWeather
 import WeatherNextDays from "components/WeatherNextDays/WeatherNextDays";
 import getWeather from "./services/getWeatherInfo";
 import { setMode } from "redux/reducers/appModeReducer";
-//import ErrorMessage from "./components/ErrorMessage";
+import ErrorPage from "components/common/ErrorMessage";
 import { app } from "assets/styles/App.module.scss"
 import Loader from "components/common/Loader";
 
+//TODO color amarillo a utilizar #FFF619
+
 function App() {
+  
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const dispatch = useDispatch();
   const mode = localStorage.getItem("mode");
   
   useEffect(() => {
     const getData = async () => {
-      const {todayWeather, city, nextDaysWeather} = await getWeather(`${process.env.REACT_APP_URL}city=Puebla,Mexico&days=6&key=${process.env.REACT_APP_API_KEY}`);
-      console.log("respuesta ", todayWeather)
-      dispatch(setCurrentWeather(todayWeather));
-      dispatch(setCityName(city));
-      dispatch(setNextDaysWeather(nextDaysWeather));
+      try {
+        const {todayWeather, city, nextDaysWeather} = await getWeather({city: "Puebla,Mexico"});
+        dispatch(setCurrentWeather(todayWeather));
+        dispatch(setCityName(city));
+        dispatch(setNextDaysWeather(nextDaysWeather));
+      } catch (error) {
+        setError(true);
+      }
       setLoading(false);
     };
     getData();
-  }, [dispatch]);
+  }, [dispatch]); 
 
   useEffect(() => {
     if (!mode) {
-      localStorage.mode = "dark";
-      dispatch(setMode("dark"));
+      localStorage.mode = "c";
+      dispatch(setMode("c"));
     }else{
       dispatch(setMode(localStorage.getItem("mode")));
     }
@@ -37,8 +44,13 @@ function App() {
 
   return loading ? <Loader/> : (
     <div className={app}>
-      <ContainerTodayWeather />
-      <WeatherNextDays />
+      {
+        error ? <ErrorPage/> :
+        <>
+          <ContainerTodayWeather />
+          <WeatherNextDays /> 
+        </>
+      }
     </div>
   );
 }

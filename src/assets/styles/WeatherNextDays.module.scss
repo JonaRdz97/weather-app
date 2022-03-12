@@ -31,6 +31,7 @@
 
 .next_days_weather_container {
   width: 100%;
+  max-width: 910px;
   /* border: 1px solid plum; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -57,7 +58,17 @@
 
 .dkm_btn_container {
   width: 100%;
+  max-width: 910px;
   /* border: 1px solid aqua; */
   display: flex;
   justify-content: flex-end;
+  gap: 12px;
+}
+
+.unit_text {
+  //color: #100e1d; // active
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 21px;
+  color: #E7E7EB;
 }

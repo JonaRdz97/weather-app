@@ -1,5 +1,6 @@
 .today_statistics {
   width: 100%;
+  max-width: 910px;
   /* border: 1px solid green; */
 }
 
@@ -35,8 +36,9 @@
   max-width: 428px;
   max-height: 220px;
   width: 100%;
-  height: auto;
+  height: 100%;
   background: #1e213a;
+  color:  #E7E7EB;
   padding: 22px 50px 30px;
   display: flex;
   justify-content: space-between;

@@ -1,11 +1,18 @@
+import toast from 'react-hot-toast';
 import { useSelector, useDispatch} from "react-redux";
 import { closeSearchLocation } from "redux/reducers/appModeReducer";
 import SearchForm from "components/common/SearchForm";
 import { close_styles, search_location } from "assets/styles/TodayWeather.module.scss";
 import closeIcon from "assets/img/close.svg";
+import getWeather from "services/getWeatherInfo";
+import IconButton from 'components/common/IconButton';
 
-function getWeather({location}){
-  console.log("Haciendo Peticion con ", location)
+async function getWeatherInfo({location}){
+  try {
+    await getWeather({city: location});
+  } catch (error) {
+    toast.error(error.message.toString());
+  }
 }
 
 export default function LocationSearch(){
@@ -14,14 +21,14 @@ export default function LocationSearch(){
   const isSearchLocation = useSelector((state) => state.myModeReducer.isSearchLocation);
 
   const handleSubmit = ({location}) => {
-    // hacer peticion con la locaión
-    getWeather({location});
+    getWeatherInfo({location});
   }
 
   return(
     <div className={`${isSearchLocation ? "openContainer" : "closeContainer"} ${search_location}`}>
-      { /* Cambiar por boton */}
-      <img src={closeIcon} alt="close-icon" className={close_styles} id="exit" onClick={() => dispatch(closeSearchLocation()) }/>
+      <IconButton cssClass={close_styles} handleClick={() => dispatch(closeSearchLocation())}>
+        <img src={closeIcon} alt="close-icon" id="exit"/>
+      </IconButton>
       <SearchForm onSubmit={handleSubmit}/>
     </div>
   );

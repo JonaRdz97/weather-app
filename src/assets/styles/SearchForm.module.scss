@@ -3,7 +3,7 @@
 }
 
 .input_search{
-  height: 40px;
+  height: 48px;
   width: 60%;
   padding-left: 1rem;
   box-sizing: border-box;
@@ -14,16 +14,16 @@
 
 .btn_search_location{
   border: none;
-  border-radius: 4px;
-  height: 40px;
+  height: 48px;
   margin-left: 1rem;
-  width: 5rem;
+  width: 86px;
   background: #3C47E9;
   color: #E7E7EB;
+  font-size: 1rem;
+  color: #E7E7EB;
+  line-height: 19px;
   &:hover{
     background: #3c48e9c4;
     cursor: pointer;
   }
 }
-
-
