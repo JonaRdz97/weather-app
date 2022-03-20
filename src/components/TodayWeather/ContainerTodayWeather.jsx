@@ -5,7 +5,7 @@ import InfoTodayWeather from "./InfoTodayWeather";
 import { weatherNowContainer } from "assets/styles/TodayWeather.module.scss";
 
 function ContainerTodayWeather() {
-  const currentMode = useSelector((state) => state.myModeReducer.currentMode);
+  
   const isSearchLocation = useSelector((state) => state.myModeReducer.isSearchLocation);
   // TODO cambiar el nombre de la clase change-color por una más descriptiva
   return (

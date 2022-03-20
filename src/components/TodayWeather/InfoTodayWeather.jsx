@@ -8,6 +8,8 @@ import { todayWeatherImage } from "assets/styles/WeatherImage.module.scss";
 import locationIcon from "assets/img/location.svg";
 
 function InfoTodayWeather() {
+  
+  const currentMode = useSelector((state) => state.myModeReducer.currentMode);
   const { weather, temp, valid_date } = useSelector((state) => state.myWeatherReducer.currentWeather);
   const { name, code } = useSelector((state) => state.myWeatherReducer.city);
   const weatherImg = useWeatherImage(weather.code);
@@ -19,7 +21,7 @@ function InfoTodayWeather() {
       </div>
       <div className={temperature_value_container}>
         <TextInfo cssClass={temperature_now} text={`${temp.toFixed()}`} />
-        <TextInfo cssClass={temperature_unit} text="º C" />
+        <TextInfo cssClass={temperature_unit} text={`º ${currentMode.toUpperCase()}`}/>
       </div>
       <TextInfo cssClass={`${temperature_time} tmp`} text={`${weather.description}`}/>
       <TextDate cssClass={`${temperature_today_date} tmp`} date={valid_date} text="Today • "/>

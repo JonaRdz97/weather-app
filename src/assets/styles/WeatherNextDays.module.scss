@@ -72,3 +72,10 @@
   line-height: 21px;
   color: #E7E7EB;
 }
+
+.active_mode{
+  background: #E7E7EB;
+  &:hover{
+    background: #E7E7EB;
+  }
+}

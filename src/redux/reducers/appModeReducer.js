@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const appModeReducer = createSlice({
   name: "myModeReducer",
   initialState: {
-    currentMode: "",
+    currentMode: localStorage.getItem("mode") || "c",
     isSearchLocation: false,
   },
   reducers: {
