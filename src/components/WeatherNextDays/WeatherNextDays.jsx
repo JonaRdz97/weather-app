@@ -16,13 +16,13 @@ function WeatherNextDays() {
   const currentMode = useSelector((state) => state.myModeReducer.currentMode);
  
   const toCelsius = () => {
-    localStorage.mode = "c";
+    localStorage.tmpUnit = "c";
     dispatch(setMode("c"))
     /* dispatch(setCurrentWeather()) */
   }
 
   const toFahrenheit = () => {
-    localStorage.mode = "f";
+    localStorage.tmpUnit = "f";
     dispatch(setMode("f"))
   }
 

@@ -4,14 +4,14 @@
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
-	.st1{fill:#FFFFFF;stroke:#DFDFDC;stroke-width:0.25;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#F2F2F2;stroke-width:0.1;stroke-miterlimit:10;}
 	.st2{fill:#AAADAE;}
 </style>
-<path class="st0" d="M0,0h24v24H0V0z"/>
-<path class="st1" d="M19.4,8c-0.7-3.4-3.7-6-7.4-6C9.1,2,6.6,3.6,5.3,6C2.3,6.4,0,8.9,0,12c0,3.3,2.7,6,6,6h13c2.8,0,5-2.2,5-5
-	C24,10.4,22,8.2,19.4,8z"/>
+<path class="st0" d="M0.2,0h23.7v23.7H0.2V0z"/>
+<path class="st1" d="M19.3,7.9C18.6,4.5,15.6,2,12,2C9.1,2,6.7,3.6,5.4,5.9c-3,0.4-5.2,2.9-5.2,5.9c0,3.3,2.7,5.9,5.9,5.9h12.8
+	c2.8,0,4.9-2.2,4.9-4.9C23.8,10.3,21.9,8.1,19.3,7.9z"/>
 <g>
-	<path class="st0" d="M1.8,9.6H23v16.3H1.8V9.6z"/>
-	<path class="st2" d="M3.6,18.8v1.4h17.7v-1.4H3.6z M3.6,16.1v1.4h13.2v-1.4H3.6z M3.6,13.3v1.4h16.1v-1.4H3.6z"/>
+	<path class="st0" d="M1.9,9.5h20.9v16.1H1.9V9.5z"/>
+	<path class="st2" d="M3.7,18.5v1.4h17.5v-1.4H3.7z M3.7,15.9v1.4h13v-1.4H3.7z M3.7,13.1v1.4h15.9v-1.4H3.7z"/>
 </g>
 </svg>
