@@ -41,8 +41,8 @@ function WeatherNextDays() {
             <WeatherCard
               key={day.valid_date}
               date={day.valid_date}
-              max={day.max_temp.toFixed()}
-              min={day.min_temp.toFixed()}
+              max={day.max_temp}
+              min={day.min_temp}
               imgCode={day.weather.code}
             />
           )

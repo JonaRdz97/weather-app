@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setCurrentWeather, setCityName, setNextDaysWeather } from "redux/reducers/weatherReducer";
 import ContainerTodayWeather from "components/TodayWeather/ContainerTodayWeather";
 import WeatherNextDays from "components/WeatherNextDays/WeatherNextDays";
@@ -8,8 +8,6 @@ import ErrorPage from "components/common/ErrorMessage";
 import { app } from "assets/styles/App.module.scss"
 import Loader from "components/common/Loader";
 import { setMode } from "redux/reducers/appModeReducer";
-
-//TODO color amarillo a utilizar #FFF619
 
 function App() {
   

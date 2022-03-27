@@ -1,13 +1,15 @@
+import astronaut from "assets/img/astronaut-space.svg";
+import { principal_container, error_image, content, info_container, desc_styles, title_styles, btn_styles } from "assets/styles/ErrorPage.module.scss"
+
 function ErrorPage(){
 	return(
-  	<div>
-      <p className="header-error">404 NOT FOUND</p>
-      <div id="content">
-        <img src="./img/Astronaut-01.svg" alt="error page" className="error-image"/>
-        <div className="text">
-					<p className="title">I have bad news for you</p>
-					<p className="info">The page you are looking for might be removed or is temporarily unavailable</p>
-					<button className="btn">Back To HomePage</button>
+  	<div className={principal_container}>
+      <div className={content}>
+        <img className={error_image} src={astronaut} alt="error page"/>
+        <div className={info_container}>
+					<p className={title_styles}>Something went wrong.</p>
+					<p className={desc_styles}>We're having some technical issues, try to refresh the page</p>
+					<button className={btn_styles} onClick={() => document.location.reload()}>Refresh page</button>
 				</div>
       </div>
     </div>
