@@ -4,8 +4,7 @@ import IconButton from "components/common/IconButton";
 import Attribution from "components/common/Attributtion";
 import WeatherCard from "./WeatherCard";
 import { setMode } from "redux/reducers/appModeReducer";
-import { others, dkm_btn_container, next_days_weather_container, unit_text, active_mode } from "assets/styles/WeatherNextDays.module.scss";
-import { setCurrentWeather } from "redux/reducers/weatherReducer";
+import { others, dkm_btn_container, next_days_weather_container, active_mode } from "assets/styles/WeatherNextDays.module.scss";
 import CelsiusIcon from "components/common/CeslsiusIcon";
 import FahrenheitIcon from "components/common/FahrenheitIcon";
 
@@ -18,7 +17,6 @@ function WeatherNextDays() {
   const toCelsius = () => {
     localStorage.tmpUnit = "c";
     dispatch(setMode("c"))
-    /* dispatch(setCurrentWeather()) */
   }
 
   const toFahrenheit = () => {

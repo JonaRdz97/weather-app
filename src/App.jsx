@@ -25,7 +25,7 @@ function App() {
     }
     const getData = async () => {
       try {
-        const {todayWeather, city, nextDaysWeather} = await getWeather({city: "Puebla,Mexico"});
+        const {todayWeather, city, nextDaysWeather} = await getWeather({city: "Mexico"});
         dispatch(setCurrentWeather(todayWeather));
         dispatch(setCityName(city));
         dispatch(setNextDaysWeather(nextDaysWeather));

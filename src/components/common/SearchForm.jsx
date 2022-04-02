@@ -21,7 +21,8 @@ export default function SearchForm({onSubmit}) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (locationReg.test(location)) {
-      onSubmit({location});
+      const formatedLocation = location.trim().replaceAll(" ", "+");
+      onSubmit(formatedLocation);
       dispatch(closeSearchLocation());
     }else{
       toast.error("Please type a valid city name");
