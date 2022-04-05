@@ -1,15 +1,34 @@
+@import "./global.scss";
+
 .form_styles{
   width: 100%;
+  max-width: 450px;
+}
+
+.input_container{
+  display: inline-block;
+  position: relative;
+  width: 60%;
+  max-width: 268px;
 }
 
 .input_search{
   height: 48px;
-  width: 60%;
-  padding-left: 1rem;
+  max-width: 268px;
+  padding-left: 40px;
+  padding-right: 0px;
   box-sizing: border-box;
-  border: 1px solid #E7E7EB;
+  border: 1px solid $font_color;
   background: #1E213A;
   color: #616475;
+}
+
+.search_icon{
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 10px;
+  top: 17px;
 }
 
 .btn_search_location{
@@ -18,12 +37,14 @@
   margin-left: 1rem;
   width: 86px;
   background: #3C47E9;
-  color: #E7E7EB;
+  color: $font_color;
   font-size: 1rem;
-  color: #E7E7EB;
   line-height: 19px;
   &:hover{
     background: #3c48e9c4;
     cursor: pointer;
+  }
+  @media only screen and (max-width: 600px) {
+    margin-left: 25px;
   }
 }

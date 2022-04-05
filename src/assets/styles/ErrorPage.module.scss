@@ -1,10 +1,10 @@
+@import "./global.scss";
+
 .principal_container{
   grid-column: 1/-1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %center_content;
   height: 100vh;
-  background: #100e1d;
+  background: $background_color;
 }
 
 .content{
@@ -13,10 +13,8 @@
   max-width: 950px;
   height: auto;
   max-height: 800px;
-  color: #E7E7EB;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: $font_color;
+  @extend %center_content;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
   }
@@ -37,9 +35,7 @@
 }
 
 .info_container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %center_content;
   flex-direction: column;
 }
 
@@ -73,8 +69,8 @@
   width: 160px;
   height: 3.75rem;
   font-size: 1.2rem;
-  color: #E7E7EB;
-  background:#585676;
+  color: $font_color;
+  background: $background_button;
   &:hover{
     cursor: pointer;
     background: rgba(255, 255, 255, 0.2);

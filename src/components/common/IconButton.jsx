@@ -1,4 +1,4 @@
-import "assets/styles/globals.scss";
+import "assets/styles/global.scss";
 import { icon_btn } from "assets/styles/IconButton.module.scss";
 
 function IconButton({ children, cssClass="", handleClick}) {

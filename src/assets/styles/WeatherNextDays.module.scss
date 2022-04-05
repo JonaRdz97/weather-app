@@ -1,9 +1,11 @@
+@import "./global.scss";
+
 .others {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background: #100e1d;
+  background: $background_color;
   padding: 42px 123px 5px 123px;
   @media only screen and (max-width: 600px) {
     grid-column: 1/-1;
@@ -23,16 +25,11 @@
   @media only screen and (min-width: 992px) {
     grid-column: span 1;
   }
-
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-  }
 }
 
 .next_days_weather_container {
   width: 100%;
   max-width: 910px;
-  /* border: 1px solid plum; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
@@ -43,39 +40,23 @@
   @media only screen and (min-width: 601px) {
     grid-template-columns: 1fr 1fr;
   }
-  
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .dkm_btn_container {
   width: 100%;
   max-width: 910px;
-  /* border: 1px solid aqua; */
   display: flex;
   justify-content: flex-end;
   gap: 12px;
 }
 
-.unit_text {
-  //color: #100e1d; // active
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 21px;
-  color: #E7E7EB;
-}
-
 .active_mode{
-  background: #E7E7EB;
+  background: $font_color;
   &:hover{
-    background: #E7E7EB;
+    background: $font_color;
   }
 }

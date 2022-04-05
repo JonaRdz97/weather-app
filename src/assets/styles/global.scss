@@ -1,0 +1,40 @@
+/* Variables */
+$background_color: #100e1d;
+$font_color: #E7E7EB;
+$attribution_font_color: #A09FB1;
+$background_button: #585676;
+$background-icons: #6e707a;
+
+/* Placeholders */
+%center_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  color: white;
+}
+
+html {
+  font-size: 16px;
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 380px) {
+    font-size: 14px;
+  }
+}
+
+.icon{
+  width:25px;
+  height: 25px;
+}

@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import toast, { Toaster } from 'react-hot-toast';
 import { closeSearchLocation } from "redux/reducers/appModeReducer";
-import { input_search, btn_search_location, form_styles } from "assets/styles/SearchForm.module.scss";
+import { input_search, btn_search_location, form_styles, search_icon, input_container } from "assets/styles/SearchForm.module.scss";
+import searchIcon from "assets/img/search-icon.svg";
 
 const toastOptions = {
   duration: 4000,
@@ -37,7 +38,10 @@ export default function SearchForm({onSubmit}) {
   return (
     <>
       <form className={form_styles}>
-        <input type="text" placeholder="e.g. Madrid, Spain" className={input_search} id="input-city" onChange={handleChange} value={location}/>
+        <div className={input_container}>
+          <input type="text" placeholder="e.g. Madrid, Spain" className={input_search} id="input-city" onChange={handleChange} value={location}/>
+          <img className={search_icon} src={searchIcon} alt="Search icon"/>
+        </div>
         <button type="submit" className={btn_search_location} onClick={handleSubmit}>Search</button>
       </form>
       <Toaster toastOptions={toastOptions}/>
